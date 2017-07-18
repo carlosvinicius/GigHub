@@ -27,10 +27,13 @@ textarea {
 body, button {
     font-size: 17px;
 }
+.form-group {
+    margin-bottom: 20px;
+}
 
 .form-control {
     font-size: 17px;
-    padding: 20px 15px;
+    padding: 0px 15px;
     -ms-border-radius: 9px;
     border-radius: 9px;
 }
@@ -48,9 +51,7 @@ body, button {
     border-radius: 9px;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
+
 
 .navbar-inverse {
     background-color: #ff4342;
@@ -83,4 +84,9 @@ body, button {
 
 body, h1, h2, h3, h4, h5, h6 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Lato', Arial, Helvetica, Arial, sans-serif;
+}
+
+.field-validation-error {
+    color:#ff4342;
+    font-weight:bold;
 }
