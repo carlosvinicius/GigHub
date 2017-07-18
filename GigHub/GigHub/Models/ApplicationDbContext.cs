@@ -5,8 +5,8 @@ namespace GigHub.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        DbSet<Gig> Gigs { get; set; }
-        DbSet<Genre> Genres { get; set; }
+        public DbSet<Gig> Gigs { get; set; }
+        public DbSet<Genre> Genres { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
