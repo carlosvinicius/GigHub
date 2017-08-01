@@ -17,11 +17,15 @@
                 </div>
             </div>
             <div class="details">
-                <span class="artist">@gig.Artist.Name</span>
-                <span class="genre">@gig.Genre.Name</span>
-                <button class="btn btn-default btn-sm pull-right js-toggle-attendance" data-gig-id="@gig.Id">Going?</button>
-            </div>
-        </li>
+                <span class="artist">
+                    @gig.Artist.Name
+                    @if (Request.IsAuthenticated) { <button class="btn btn-link js-toggle-follow" data-user-id="@gig.ArtistId">Follow</button> }
+                </span>
+            <span class="genre">@gig.Genre.Name</span>
+            @if (Request.IsAuthenticated)
+            {<button class="btn btn-default btn-sm pull-right js-toggle-attendance" data-gig-id="@gig.Id">Going?</button>}
+        </div>
+    </li>
     }
 </ul>
 
@@ -39,6 +43,19 @@
                             .text("Going");
                     })
                     .fail(function(){
+                        alert("something failed!");
+                    });
+            });
+
+
+            $(".js-toggle-follow").click(function (e) {
+                var button = $(e.target);
+                $.post("/api/followings", { gigId: button.attr("data-user-id") })
+                    .done(function () {
+                        button
+                            .text("Following");
+                    })
+                    .fail(function () {
                         alert("something failed!");
                     });
             });
