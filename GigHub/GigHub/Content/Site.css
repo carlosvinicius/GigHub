@@ -45,8 +45,8 @@ body, button {
 }
 
 .btn {
-    font-size: 17px;
-    padding: 7px 20px;
+    /* font-size: 17px;
+    padding: 7px 20px; */
     -ms-border-radius: 9px;
     border-radius: 9px;
 }
@@ -130,6 +130,7 @@ body, h1, h2, h3, h4, h5, h6 .h1, .h2, .h3, .h4, .h5, .h6 {
     position: absolute;
     top:0px;
     left: 70px;
+    width: 120px;
 }
 
 .gigs > li .details .artist {
