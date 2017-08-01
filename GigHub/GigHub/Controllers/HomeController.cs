@@ -21,7 +21,10 @@ namespace GigHub.Controllers
                                     .Include(global => global.Artist)
                                     .Include(global => global.Genre)
                                     .Where(g => g.DateTime > DateTime.Now);
-            return View("Index", upcomingGigs);
+
+            ViewBag.Heading = "Upcoming Gigs";
+
+            return View("Gigs", upcomingGigs);
         }
 
     }

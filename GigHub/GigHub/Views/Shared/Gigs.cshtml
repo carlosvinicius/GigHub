@@ -1,10 +1,11 @@
-﻿@model IEnumerable<GigHub.Models.Gig >
+﻿@model IEnumerable<GigHub.Models.Gig>
 @{
     ViewBag.Title = "Home Page";
 }
 
+<h1 class="">@ViewBag.Heading</h1>
 
-<ul class="gigs">
+<ul class="gigs voffset4">
     @foreach (var gig in Model)
     {
         <li>
